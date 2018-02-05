@@ -7,9 +7,7 @@
 <title>from jsp</title>
 </head>
 <body>
-<%
-System.out.println("you can write java code in jsp");
-%>
+
 <form action="/login.do" method="post">
 Enter Your Name <input type="text" name="name"/>
 Enter Your Password <input type="password" name="password"/>
