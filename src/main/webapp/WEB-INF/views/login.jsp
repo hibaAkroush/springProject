@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form  method="POST">
+<form action="/login"  method="POST">
 Enter Your Name <input type="text" name="name"/>
 Enter Your Password <input type="password" name="password"/>
 <input type="submit"/>
