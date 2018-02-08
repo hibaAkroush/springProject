@@ -1,17 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=windows-1256"
-    pageEncoding="windows-1256"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
-<title>Insert title here</title>
-</head>
-<body>
-Add a todo:
-<form method="post">
-	<input name="desc" type="text" required="required"/>
-	<input type="submit" value="add">
-</form>
+<%@ include file="common/header.jspf"%>
+<%@ include file="common/navigation.jspf"%>
+<div class="container">
+	<form:form method="post" commandName="todo">
+		<form:hidden path="id" />
+		<fieldset class="form-group">
+			<form:label path="desc">Description</form:label>
+			<form:input path="desc" type="text" class="form-control"
+				required="required" />
+			<form:errors path="desc" cssClass="text-warning" />
+		</fieldset>
+		<fieldset class="form-group">
+			<form:label path="targetDate">Target Date</form:label>
+			<form:input path="targetDate" type="text" class="form-control"
+				required="required" />
+			<form:errors path="targetDate" cssClass="text-warning" />
+		</fieldset>
+		<button type="submit" class="btn btn-success">Submit</button>
+	</form:form>
+</div>
 
-</body>
-</html>
+<%@ include file="common/footer.jspf"%>
+
+<script>
+	$('#targetDate').datepicker({
+		format : 'dd/mm/yyyy'
+	});
+</script>
