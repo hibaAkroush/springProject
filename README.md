@@ -7,3 +7,7 @@ it has a hardcoded username and password:
 username: hiba
 passwprd: pass
  and a simple login logout functionality 
+
+to run:
+1- use maven update to install jars
+2- use tomcat7:run 
